@@ -20,11 +20,21 @@ avocados_by_region<-avocados %>%
   
 avocados_by_region
 
+#1.	How many unique regions are there?
 #There are 54 regions
-#
+
+#2.	What is the average price for each type of avocado (organic and conventional)? 
+avocados_by_region<-avocados %>%
+  group_by(type)%>%
+  summarize(AveragePrice = mean(AveragePrice))
+
+#3.	Which region has the lowest average price for organic avocados? (Create a tibble that has the correct data. 
+#Then, use RStudio to view the tibble and sort by the AveragePrice and type columns.)
 
 
-#demo
+
+
+#demo code
 setwd("C:/Users/Test/src/rstudio/lab4")
 
 library("readxl")
